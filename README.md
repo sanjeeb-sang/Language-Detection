@@ -58,8 +58,8 @@ The project employs n-grams to capture context and enhance prediction accuracy. 
    ```
 
 ## Advanced Usage
-    You can directly import NaiveBayes() class from [naive_bayes.py](naive_bayes.py) and use it for custom classification, similar to the python script shown below, which is from [classify.py](classify.py) file.
-    The script below shows training and test datasets being loaded from files provided in command line.
+You can directly import NaiveBayes() class from [naive_bayes.py](naive_bayes.py) and use it for custom classification, similar to the python script shown below, which is from [classify.py](classify.py) file.
+The script below shows training and test datasets being loaded from files provided in command line.
     ```python
       # Method will be one of 'baseline', 'lr', 'nb', or 'nbse'
       method = sys.argv[1]
@@ -75,8 +75,8 @@ The project employs n-grams to capture context and enhance prediction accuracy. 
       test_texts = [x.strip() for x in open(test_texts_filename, encoding='utf8')]
 
     ```
-    Here, the training and test datasets are used to create NaiveBayes models and make predictions.
-  ```python
+Here, the training and test datasets are used to create NaiveBayes models and make predictions.
+     ```python
     if method == 'nb':
           # Creating an instance of the NaiveBayes classifier.
           naive_bayes = NaiveBayes()
@@ -96,13 +96,9 @@ The project employs n-grams to capture context and enhance prediction accuracy. 
           results = naive_bayes_with_se.predict(test_texts)
   ```
 ## Input or Data Files
-1. Train Texts Files - train_text_file
-   File that contains words in many languages. One word per line. This file will be used for training.
-2. Train Class Files - train_class_file
-   File that contains the language of the word provided in the train_text_file. One word per line.
-   For example, the language in line 39 in train_class_file is the actual language of the 39th word in train_text_file.
-3. Test Text Files - test_text_file
-    File that contains words in many languages. One word per line. This file will be used for making predictions and testing the model.
+1. **Train Texts Files - train_text_file** : File that contains words in many languages. One word per line. This file will be used for training.
+2. **Train Class Files - train_class_file** : File that contains the language of the word provided in the train_text_file. One word per line. For example, the language in line 39 in train_class_file is the actual language of the 39th word in train_text_file.
+3. **Test Text Files - test_text_file** : File that contains words in many languages. One word per line. This file will be used for making predictions and testing the model.
    
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any feature requests or bug reports.
